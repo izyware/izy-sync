@@ -1,0 +1,1 @@
+require('izymodtask').runCmd('izysync.method');
