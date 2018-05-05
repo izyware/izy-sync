@@ -38,8 +38,10 @@ node cli.js method imap imap.user me@gmail.com imap.password mypass imap.host im
 
 ### GoDaddy
 
+NOTE: By default GoDaddy only supports POP3.  Only unlimited Email plan supports IMAP.
+
 ```
-node cli.js method imap imap.user me@email.com imap.password mypass imap.host imap.gmail.com imap.port 993 imap.tls true storePath ~/emails
+node cli.js method imap imap.user me@email.com imap.password mypass imap.host  imap.secureserver.net imap.port 993 imap.tls true mimestore.modhandler localfs mimestore.path /tmp/izyware/mimestore imap.search.key1 ALL imap.search.key2 SINCE imap.search.key3 '2010/01/01'
 ```
 
 ## API Based Mailbox Access
@@ -89,7 +91,9 @@ node cli.js method querymimerepo dataservice https://yourdomain.com/apps/izyware
 
 If you are dealing with a file based repository, you can get the oldest date by:
 
+```
 grep Date  \`ls -l -r | tail -n 1 | cut -c 52-71\`
+```
 
 remove -r from ls to get the newst date
 
