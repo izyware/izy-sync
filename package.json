@@ -1,6 +1,6 @@
 {
   "name": "izy-sync",
-  "version": "2.1.14",
+  "version": "2.1.15",
   "description": "This tools is a Node.js universal data sync components for importing and exporting data in and out of the Izyware Cloud",
   "main": "cli.js",
   "dependencies": {
